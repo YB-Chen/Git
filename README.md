@@ -10,22 +10,23 @@
 ### 创建SSH Key ###
 **$ ssh-keygen -t rsa -C "youremail@example.com"**
 
-### 关联和删除远程库 ###
+### 远程库 ###
 **关联方法一：$ git remote add origin git@github.com:< username of github >/< name of repository >.git**
 
 **关联方法二：$ git remote add origin http://github.com:/< username of github >/< name of repository >.git**
 
 **删除远程库：$ git remote rm origin**
 
-### 修改和提交 ###
-
-
-
-### 推送本地库/拉取远程库 ###
-
 **推送本地库：$ git push -u origin master**
 
 **拉取远程库：$ git clone git@github.com:< username of github >/< name of repository >.git**
+
+**查看远程库地址：$ git remote -v**
+
+
+
+### 修改和提交 ###
+
 
 ### 分支管理 ###
 
