@@ -8,31 +8,35 @@
 点击进入[图片示例](https://github.com/YB-Chen/GitCommend/blob/master/git-bash%E5%B1%9E%E6%80%A7.JPG?raw=true)
 
 ### 创建SSH Key ###
-**ssh-keygen -t rsa -C "youremail@example.com"**
+**$ ssh-keygen -t rsa -C "youremail@example.com"**
 
 ### 关联和删除远程库 ###
-**关联方法一：git remote add origin git@github.com:< username of github > / < name of repository >.git**
+**关联方法一：$ git remote add origin git@github.com:< username of github >/< name of repository >.git**
 
-**关联方法二：git remote add origin http://github.com:/< username of github >/< name of repository >.git** 
+**关联方法二：$ git remote add origin http://github.com:/< username of github >/< name of repository >.git**
 
-Git支持多种协议，默认的git://使用ssh，但也可以使用https等其他协议，使用https除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放http端口的公司内部就无法使用ssh协议而只能用https。
+**删除远程库：$ git remote rm origin**
 
-**删除远程库**
+### 修改和提交 ###
 
-git remote rm origin
 
-其中，origin为远程库的别名
 
 ### 推送本地库/拉取远程库 ###
 
-**推送本地库：git push -u origin master**   
-  
-用git push命令，实际上是把当前分支master推送到远程。由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令（去掉-u）。
+**推送本地库：$ git push -u origin master**
 
-**拉取远程库：git clone git@github.com:< username of github >/< name of repository >.git**
+**拉取远程库：$ git clone git@github.com:< username of github >/< name of repository >.git**
 
+### 分支管理 ###
 
+**创建分支：$ git branch < name of branch >**
 
+**切换分支：$ git checkout < name of branch >**
 
+**创建并切换分支：$ git checkout -b < name of branch >**
 
+**查看分支：$ git branch**
 
+**合并指定分支到当前分支：$ git merge < name of branch >**
+
+**删除分支：$ git branch -d < name of branch >**
