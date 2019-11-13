@@ -1,5 +1,4 @@
 ### 如何修改Git Bash的默认启动路径 ###
-
 1. 选择Git Bash图表，右键属性；
 2. 将“目标”中的“--cd-to-home”删除；
 3. 用仓库路径代替“起始位置”中的内容；
@@ -15,7 +14,7 @@
 
 **关联方法二：$ git remote add origin http://github.com:/< username of github >/< name of repository >.git**
 
-**删除远程库：$ git remote rm origin**
+**解除与远程库的关联：$ git remote rm origin**
 
 **推送本地库：$ git push -u origin master**
 
@@ -23,13 +22,17 @@
 
 **查看远程库地址：$ git remote -v**
 
+**查看所有分支：$ git branch -a**
 
 
-### 修改和提交 ###
+
+
+
+### 修改和删除 ###
+
 
 
 ### 分支管理 ###
-
 **创建分支：$ git branch < name of branch >**
 
 **切换分支：$ git checkout < name of branch >**
@@ -40,4 +43,15 @@
 
 **合并指定分支到当前分支：$ git merge < name of branch >**
 
-**删除分支：$ git branch -d < name of branch >**
+**删除本地分支：$ git branch -d < name of branch >**
+
+**删除远程分支：$ git push origin --delete < branch name >**
+
+
+### 仓库信息查看 ###
+**查看历史提交信息：$ git log**
+
+**查看修改内容：$ git status**
+
+**查看当前仓库的基本信息：$ git remote show origin**
+
