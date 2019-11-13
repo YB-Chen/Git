@@ -1,4 +1,4 @@
-### 如何修改Git Bash的默认启动路径 ###
+## 如何修改Git Bash的默认启动路径 ##
 1. 选择Git Bash图表，右键属性；
 2. 将“目标”中的“--cd-to-home”删除；
 3. 用仓库路径代替“起始位置”中的内容；
@@ -6,10 +6,10 @@
 
 点击进入[图片示例](https://github.com/YB-Chen/GitCommend/blob/master/git-bash%E5%B1%9E%E6%80%A7.JPG?raw=true)
 
-### 创建SSH Key ###
+## 创建SSH Key ##
 **$ ssh-keygen -t rsa -C "youremail@example.com"**
 
-### 远程库 ###
+## 远程库 ##
 **关联方法一：$ git remote add origin git@github.com:< username of github >/< name of repository >.git**
 
 **关联方法二：$ git remote add origin http://github.com:/< username of github >/< name of repository >.git**
@@ -28,11 +28,11 @@
 
 
 
-### 修改和删除 ###
+## 修改和删除 ##
 
 
 
-### 分支管理 ###
+## 分支管理 ##
 **创建分支：$ git branch < name of branch >**
 
 **切换分支：$ git checkout < name of branch >**
@@ -48,7 +48,7 @@
 **删除远程分支：$ git push origin --delete < branch name >**
 
 
-### 仓库信息查看 ###
+## 仓库信息查看 ##
 **查看历史提交信息：$ git log**
 
 **查看修改内容：$ git status**
