@@ -17,10 +17,12 @@
     $ git remote rm origin
 
 ### 远程库 ###
-	推送本地库到远程
-    $ git push -u origin master
-	拉取远程库到本地
+	把远程库clone到本地
     $ git clone git@github.com:< username of github >/< name of repository >.git
+	推送本地库分支到远程库分支
+    $ git push -u origin < branch name>(远程库有对应分支时，不需要-u)
+    拉取远程库分支到本地库
+    $ git pull origin < branch name>
 	查看远程库地址
     $ git remote -v
 	查看所有分支
@@ -38,6 +40,8 @@
     $ git checkout < name of branch >
     创建并切换分支
     $ git checkout -b < name of branch >
+	由远程dev分支创建（并切换）本地dev分支
+    $ git checkout -b dev origin/dev
 	查看分支
     $ git branch
 	合并指定分支到当前分支
@@ -48,15 +52,13 @@
     $ git push origin --delete < branch name >
 
 ### 合并远程分支 ###
-	1、把代码clone到本地仓库
-    $ git clone git@github.com:< username of github >/< name of repository >.git
-	2、在本地创建dev分支并与远程dev分支对应
+	1、在本地创建dev分支并与远程dev分支对应
     $ git checkout -b dev origin/dev
-	3、切换到master分支
+	2、切换到master分支
     $ git checkout master
-	4、本地的dev合并到master上（遇到冲突解决完后再次提交）
+	3、本地的dev合并到master上（遇到冲突解决完后再次提交）
     $ git merge dev
-	5、推送到远程的master上
+	4、推送到远程的master分支
     $ git push origin master 
 
 ### 仓库信息查看 ###
