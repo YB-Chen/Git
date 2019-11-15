@@ -9,6 +9,8 @@
 ### 配置相关指令 ###
     创建SSH Key
 	$ ssh-keygen -t rsa -C "youremail@example.com"
+    初始化仓库
+    $ git init
 	本地库与远程库关联方法一
     $ git remote add origin git@github.com:< username of github >/< name of repository >.git
 	本地库与远程库关联方法二
