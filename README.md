@@ -42,10 +42,10 @@
     $ git checkout -b < name of branch >
 	由远程dev分支创建（并切换）本地dev分支
     $ git checkout -b dev origin/dev
-	查看分支
-    $ git branch
 	合并指定分支到当前分支
-    $ git merge < name of branch >
+    $ git merge < name of branch >(默认以fast forward模式合并)
+    合并时禁用fast forward模式
+    $ git merge --no-ff -m "merge with no-ff" < name of branch >
 	删除本地分支
     $ git branch -d < name of branch >
 	删除远程分支
@@ -57,7 +57,7 @@
 	2、切换到master分支
     $ git checkout master
 	3、本地的dev合并到master上（遇到冲突解决完后再次提交）
-    $ git merge dev
+    $ git merge dev(默认以fast forward模式合并)
 	4、推送到远程的master分支
     $ git push origin master 
 
@@ -68,4 +68,15 @@
     $ git status
 	查看当前仓库的基本信息
     $ git remote show origin
+	查看本地分支
+    $ git branch
+    查看本地分支详情
+    $ git branch -v
+	查看本地及远程分支
+    $ git branch -a
+	查看本地及远程分支详情
+    $ git branch -av
+    查看详细分支历史
+    $ git log --graph --pretty=oneline --abbrev-commit
+    
 
