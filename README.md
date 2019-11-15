@@ -18,6 +18,24 @@
 	解除本地库与远程库的关联
     $ git remote rm origin
 
+### 创建和添加 ###
+    创建文件夹
+	$ mkdir <文件夹名>
+    创建文件
+	$ touch <文件名>
+	创建一个文本文件并进入编辑状态
+	$ vi <文件名>  //vi其实是linux的一个文本编辑器，此命令是进入vi程序。vi有两种模式：编辑模式（默认）和命令模式
+	添加单个文件
+	$ git add <文件名.扩展名>
+	添加某类文件
+	$ git add *.<扩展名>
+	添加所有状态的文件
+	$ git add -A
+	添加修改和删除状态的文件（不包括新建状态）
+	$ git add -u
+	添加修改和新建状态文件（不包括删除文件）
+	$ git add .
+
 ### 远程库 ###
 	把远程库clone到本地
     $ git clone git@github.com:< username of github >/< name of repository >.git
@@ -29,10 +47,6 @@
     $ git remote -v
 	查看所有分支
     $ git branch -a
-
-
-### 修改和删除 ###
-    增加一行
 
 
 ### 分支管理 ###
@@ -63,7 +77,7 @@
 	4、推送到远程的master分支
     $ git push origin master 
 
-### 仓库信息查看 ###
+### 信息查看 ###
 	查看历史提交信息
     $ git log
 	查看修改内容
